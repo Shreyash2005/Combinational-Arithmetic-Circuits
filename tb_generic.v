@@ -1,10 +1,10 @@
-module tb_lab2p3;
+module tb_generic;
     parameter K = 9;
     reg [2*K-1:0] test;
     wire [K-1:0] sum;
     wire cout,overflow;
 
-    Lab2p3 #(K) dut (
+     generic_Add #(K) dut (
         .a(test[2*K-1:K]),
         .b(test[K-1:0]),
         .sum(sum),
